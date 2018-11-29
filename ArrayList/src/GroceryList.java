@@ -14,11 +14,6 @@ public class GroceryList {
 		for(int i = 0; i < groceryList.size(); i++) {
 			System.out.println((i + 1) + "." + groceryList.get(i));
 		}
-		
-//		for(String item : groceryList) {
-//			System.out.println(item);
-//		}
-		
 	}
 	
 	public void modifyGroceryItem(int position, String newItem) {
@@ -26,13 +21,22 @@ public class GroceryList {
 	}
 	
 	public void removeGroceryItem(int position) {
-		
 		groceryList.remove(position);
 	}
 	
-	public int findIndex(String searchItem) {
-		int index = groceryList.indexOf(searchItem);
+	public String findItem(String searchItem) {
+		int position = groceryList.indexOf(searchItem);
 		
+		if(position >= 0) {
+			return groceryList.get(position);
+		}
+		else {
+			return null;
+		}
+	}
+		
+	public int findItemIndex(String searchItem) {
+		int index = groceryList.indexOf(searchItem);
 		return index;
 	}
 	
