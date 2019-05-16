@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 Edited java from Java2
-=======
-This is a java file
->>>>>>> refs/remotes/origin/master
+
